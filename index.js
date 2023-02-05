@@ -1,17 +1,24 @@
-//let is to create a variable with block scope (private basically)
-//cannot redeclare let variables
+//Greeting the user
+let welcomeMessage = document.getElementById("welcome-el");
+let username = "Ethan";
+let greeting = "Welcome Back ";
+welcomeMessage.innerText = greeting + username;
+//for incrementing and saving passengers
+let saveEl = document.getElementById("save-el"); 
+let countEl = document.getElementById("count-el");
 let count = 0;
-//console.log() literally just logs thing to the console, whatever you put in the ()
-console.log(count)
-
-//store the count and initalize as 0
-//listen for clicks on button
-//increment the count variable when clicked
-// change the count-el in HTML to reflect new count
-
 function increment(){
-    console.log("Button pushed")
+    console.log("Passenger Added");
+    count++;
+    countEl.textContent = count;
 }
 
+function save(){
+    console.log(count);
+    let previousCount = count + " - ";
+    saveEl.textContent += previousCount;
+    count = 0;
+    countEl.textContent = 0;
+}
 
 //python -m http.server 8000

@@ -5,10 +5,13 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <p id="welcome-el"></p>
         <h1>Passengers:</h1>
-        <h2 id="count">0</h2>
+        <h2 id="count-el">0</h2>
         <!--onclick listens for an event, and you put the function you want to trigger when the action happens-->
         <button id = "increment-btn" onclick="increment()">Add Passenger</button>
+        <button id = "save-btn" onclick="save()">Save Count</button>
+        <p id="save-el">Previous entires: </p>
     </body>
     <script src="index.js"></script>
 </html>
